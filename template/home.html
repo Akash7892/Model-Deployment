@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Language Detection</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+            background-image: url('https://lexica.art/prompt/09c52003-36e4-4237-ac00-e68d334c8524');
+        }
+        .btn-start {
+            margin: 20px;
+        }
+        .video-container {
+            position: relative;
+            display: inline-block;
+        }
+        .progress-bar-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+    </style>
+</head>
+<body style="background-image:url('https://image.lexica.art/full_webp/4f54c404-0bec-417e-81bf-9e6ecb46a50d')">
+    <div class="container">
+        <h1>Body Language Detection</h1>
+        <div class="btn-start">
+            <button class="btn btn-primary" onclick="startModel()">Click Here to Start the Model</button>
+        </div>
+        <div class="video-container">
+            <img id="video" src="" alt="Webcam Feed" class="img-fluid">
+        </div>
+    </div>
+    <script>
+        function startModel() {
+            document.getElementById('video').src = "{{ url_for('video_feed') }}";
+        }
+    </script>
+</body>
+</html>
